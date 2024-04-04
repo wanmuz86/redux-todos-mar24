@@ -9,7 +9,8 @@ const todoSlice = createSlice({
     // the methods that will change the state
     reducers : {
         addTodo: (state, action) => {
-            [...state.todos, action.payload]; // Add an object into the todos state
+           ///state.todos.push(action.payload)
+           state.todos = [...state.todos, action.payload]; // Add an object into the todos state
         },
         removeTodo: (state, action) => {
             state.todos = state.todos.filter(todo=> todo.id !== action.payload.id);
